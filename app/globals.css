@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: rgb(15 23 42);
+  
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: rgb(15 23 42);
+  }
+}
+body {
+  color: rgb(148 163 184);
+  background: radial-gradient( 800px circle at 0px 0px, rgba(29, 78, 216, 0.15), transparent 80% );
+  font-family: monospace;
+ 
+
+}
+.animated-text {
+       font-size: 30px;
+       animation: fade-in-y 1s linear;
+   }
+   @keyframes fade-in-y {
+       0% { opacity: 0; transform: translateY(25px); }
+       100% { opacity: 1;  transform: translateY(0px);}
+   }
