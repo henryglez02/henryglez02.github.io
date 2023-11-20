@@ -9,7 +9,7 @@ const AppBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-row pr-1 mx-5 animate-fade-in-y item-center gap-4  lg:gap-1  m-7  mb-0  font-semibold text-base lg:flex-col lg:py-5 lg:px-10">
+    <nav className="flex flex-row  mx-4 animate-fade-in-y item-center gap-4  lg:gap-1  m-7  mb-0  font-semibold text-base lg:flex-col lg:py-5 lg:px-10">
       <ul className="flex  gap-5  text-slate-200 flex-row grow  lg:flex-col lg:py-5 lg:gap-y-3 ">
         <li>
           <Link
