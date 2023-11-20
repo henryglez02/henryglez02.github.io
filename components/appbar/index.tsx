@@ -9,7 +9,7 @@ const AppBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex w-full md:mx-4 justify-center animate-fade-in-y gap-4  item-center md:justify-end mt-7  mb-0  font-semibold text-sm lg:flex-col lg:py-5 lg:px-10 lg:w-auto md:text-base ">
+    <nav className="flex w-full md:mx-4 justify-center animate-fade-in-y gap-4  item-center md:justify-end mt-7  mb-0  font-bold text-sm lg:flex-col lg:py-5 lg:px-10 lg:w-auto md:text-base ">
       <ul className="flex gap-5 text-slate-200 flex-row   lg:flex-col lg:py-5 lg:gap-y-3 ">
         <li>
           <Link
@@ -44,7 +44,7 @@ const AppBar = () => {
         </li>
       </ul>
       <a
-        href="https://drive.google.com/uc?export=download&id=1L0SeCzGVQUSaKVPBF-9JYsN4Dd6yVZVE"
+        href="https://drive.google.com/uc?export=download&id=1LwwdjmXYYCERtOIsQkUZeMiKrI6fGKd0"
         className={` flex flex-row pl-2  p-1 animate-bounce   bg-teal-400/10 font-medium rounded-lg text-teal-300   hover:bg-teal-400/20   
         }`}
       >
