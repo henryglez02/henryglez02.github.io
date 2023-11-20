@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 import me from "../../assets/images/avatar.jpg";
 
 const HomePage = () => {
@@ -9,8 +8,8 @@ const HomePage = () => {
     <main className="flex flex-col animate-fade-in-y m-9 mt-6  lg:my-12 lg:w-full  ">
       <h1 className="font-bold  text-slate-200 text-5xl py-4">Hi!👋</h1>
 
-      <p className=" text-base mb-1 ">
-        <span className=" font-semibold text-slate-200 text-lg mr-2">
+      <p className=" text-sm mb-1 ">
+        <span className=" font-semibold text-slate-200 text-base mr-2">
           I'm Henry
         </span>
         and this is my profile...
@@ -77,7 +76,7 @@ const HomePage = () => {
           </a>
         </div>
       </div>
-      <section className="pt-4  text-base ">
+      <section className="pt-4  text-sm ">
         <p className="leading-8">
           I am passionate about{" "}
           <span className="font-semibold text-slate-200">

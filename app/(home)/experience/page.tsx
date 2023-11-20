@@ -13,7 +13,7 @@ const Experience = () => {
         date={"June 2023 - August 2023"}
         position={"QA Tester"}
         tasks={
-          <ul className="list-disc leading-7 pl-7 text-base">
+          <ul className="list-disc leading-7 pl-7 text-sm">
             <li>
               Development of rigorous tests on the website to guarantee its
               correct operation and a smooth user experience.
@@ -36,7 +36,7 @@ const Experience = () => {
         date={"April 2023 - June 2023"}
         position={"Community Manager"}
         tasks={
-          <ul className="list-disc leading-7 pl-7 text-base">
+          <ul className="list-disc leading-7 pl-7 text-sm">
             <li>
               Monitoring the performance of social media posts and campaigns
               using key metrics and analytical tools.

@@ -20,7 +20,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
       <div className=" rounded-xl w-40 h-48 lg:h-44 ">{image}</div>
       <div className="w-1/2">
         <div className="flex  ">
-          <h3 className=" font-semibold text-slate-200 text-lg mb-1">{title}</h3>
+          <h3 className=" font-semibold text-slate-200 text-base mb-1">{title}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
             />
           </svg>
         </div>
-        <p className="opacity-80 text-base mb-1   ">{description}</p>
+        <p className="opacity-80 text-sm mb-1  ">{description}</p>
         {tasks}
       </div>
     </div>

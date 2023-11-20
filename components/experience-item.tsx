@@ -15,8 +15,8 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div className="mb-8">
-      <p className=" opacity-90 text-base">{date}</p>
-      <div className="flex flex-row items-center gap-2 mb-1 text-lg text-slate-200 ">
+      <p className=" opacity-90 text-sm">{date}</p>
+      <div className="flex flex-row items-center gap-2 mb-1 text-base text-slate-200  ">
         <p className="">{position}</p>
         <p>•</p>
         <p className=""> {company}</p>
