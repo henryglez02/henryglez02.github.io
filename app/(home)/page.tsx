@@ -15,7 +15,7 @@ const HomePage = () => {
         and this is my profile...
       </p>
 
-      <div className="flex lg:flex-row gap-6 items-center justify-center my-5 lg:my-6">
+      <div className="flex flex-col md:flex-row gap-6 items-center justify-center my-5 lg:my-6">
         <Image
           className="  rounded-full h-52 w-52 object-cover object-center  lg:h-60 lg:w-60"
           src={me}
@@ -24,7 +24,7 @@ const HomePage = () => {
           priority
         />
 
-        <div className="flex flex-col items-center gap-4 justify-center ">
+        <div className="flex md:flex-col items-center gap-4 justify-center ">
           <a
             className="  text-slate-200 hover:text-teal-300"
             href="https://github.com/henryglez02"
