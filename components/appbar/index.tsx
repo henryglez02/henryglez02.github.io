@@ -43,9 +43,9 @@ const AppBar = () => {
           </Link>
         </li>
       </ul>
-      <a
+      {/* <a
         href="https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct"
-        className={` flex flex-row pl-2  p-1 animate-bounce   bg-teal-400/10 font-medium rounded-lg text-teal-300   hover:bg-teal-400/20   
+        className={` flex flex-row pl-2  p-1    bg-teal-400/10 font-medium rounded-lg text-teal-300   hover:bg-teal-400/20   
         }`}
       >
         <button>Resume</button>
@@ -61,7 +61,7 @@ const AppBar = () => {
             clipRule="evenodd"
           />
         </svg>
-      </a>
+      </a> */}
     </nav>
   );
 };
