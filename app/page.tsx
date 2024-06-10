@@ -51,7 +51,7 @@ export default function Page() {
             </Link>
             <Link
               className="text-slate-300 hover:text-teal-300"
-              href="https://github.com/henryglez02"
+              href="https://linkedin.com/in/henryglez02"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
