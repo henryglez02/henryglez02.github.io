@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  background-color: rgb(15 23 42);
-  
-  
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -14,12 +10,11 @@
   }
 }
 body {
-  color: rgb(148 163 184);
+  color: rgb(238, 236, 235);
   background: radial-gradient( 800px circle at 0px 0px, rgba(29, 78, 216, 0.15), transparent 80% );
-  font-family: monospace;
- 
 
 }
+
 .animated-text {
        font-size: 30px;
        animation: fade-in-y 1s linear;
