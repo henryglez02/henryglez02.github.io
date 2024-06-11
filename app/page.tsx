@@ -28,7 +28,7 @@ export default function Page() {
 
           <div className="flex flex-col justify-center items-center gap-2 ">
             <h1 className="text-2xl sm:text-4xl font-bold">Henry Glez</h1>
-            <p className=" text-sm sm:text-lg opacity-80 text-center">
+            <p className="  sm:text-lg opacity-80 text-center">
               I'm a passionate web development and design UI/UX.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function Page() {
             </Link>
           </div>
           <Link
-            className="text-sm sm:text-base font-medium py-2 px-4 rounded-2xl flex gap-2 items-center justify-center bg-teal-600 text-white hover:bg-teal-500 transition-all duration-300"
+            className=" font-medium py-2 px-4 rounded-2xl flex gap-2 items-center justify-center bg-teal-600 text-white hover:bg-teal-500 transition-all duration-300"
             href="https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct"
           >
             Download CV
@@ -169,7 +169,7 @@ export default function Page() {
               />
             </svg>
           </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] items-center  gap-4  ">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] items-center gap-4 sm:gap-6  ">
             {skills.map((item, index) => (
               <SkillItem key={index} name={item.name} image={item.image} />
             ))}
