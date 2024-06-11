@@ -22,7 +22,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
       className="relative flex flex-col w-full p-4 border border-slate-600 gap-4 rounded-xl hover:-translate-y-1 hover:scale-100  duration-200  shadow-sm  "
     >
       <div className="flex">
-        <h2 className=" font-semibold text-slate-200 text-lg  ">{title}</h2>
+        <h2 className=" font-semibold  text-lg  ">{title}</h2>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -38,12 +38,12 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
           />
         </svg>
       </div>
-      <p className="opacity-80 text-sm sm:text-base max-w-sm ">{description}</p>
+      <p className="opacity-80  max-w-sm ">{description}</p>
       <ul className="flex flex-wrap items-center justify-start  gap-1 text-sm sm:text-base ">
         {techs.map((tech, index) => (
           <li
             key={index}
-            className="rounded-full bg-teal-400/10 px-3 py-1 text-xs sm:text-sm font-medium  text-teal-300"
+            className="rounded-full bg-teal-400/10 px-3 py-1 text-sm sm:text-sm font-medium  text-teal-300"
           >
             {tech}
           </li>
