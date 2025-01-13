@@ -45,14 +45,37 @@ const projects = [
 ];
 
 const skills = [
-  { name: "Javascript", image: "/images/LogosJavascript.svg" },
-  { name: "Flutter", image: "/images/LogosFlutter.svg" },
-  { name: "React", image: "/images/LogosReact.svg" },
-  { name: "Node.js", image: "/images/LogosNodejsIcon.svg" },
-  { name: "Next.js", image: "/images/LogosNextjsIcon.svg" },
-  { name: "Python", image: "/images/LogosPython.svg" },
-  { name: "Django", image: "/images/LogosDjangoIcon.svg" },
-  { name: "PostgreSQL", image: "/images/LogosPostgresql.svg" },
+  {
+    name: "Javascript",
+    alt: "Javascript logo",
+    image: "/images/LogosJavascript.svg",
+  },
+
+  { name: "React", alt: "React logo", image: "/images/LogosReact.svg" },
+  {
+    name: "Next.js",
+    alt: "Next.js logo",
+    image: "/images/LogosNextjsIcon.svg",
+  },
+  { name: "Node.js", alt: "Node logo", image: "/images/LogosNodejsIcon.svg" },
+  {
+    name: "Strapi",
+    alt: "Strapi logo",
+    image: "/images/strapi_logo.webp",
+  },
+  { name: "Python", alt: "Python logo", image: "/images/LogosPython.svg" },
+  { name: "Django", alt: "Django logo", image: "/images/LogosDjangoIcon.svg" },
+  {
+    name: "PostgreSQL",
+    alt: "PostgreSQL logo",
+    image: "/images/LogosPostgresql.svg",
+  },
+  { name: "Flutter", alt: "Flutter logo", image: "/images/LogosFlutter.svg" },
+  {
+    name: "Playwright",
+    alt: "Playwright logo",
+    image: "/images/playwright_logo.svg",
+  },
 ];
 
 export { experience, projects, skills };

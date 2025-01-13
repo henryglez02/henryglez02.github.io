@@ -5,13 +5,12 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-2 ">
-      <h2 className="text-lg font-semibold">
-        {company} • {position}{" "}
-      </h2>
-      <ul className="flex flex-col gap-2  max-w-3xl ">
+      <h3 className="text-lg font-semibold">{company}</h3>
+      <p className="text-slate-400 font-semibold">{position}</p>
+      <ul className="flex list-disc  flex-col gap-1  max-w-3xl ">
         {tasks.map((task, index) => (
           <li key={index} className="opacity-75">
-            • {task}
+            {task}
           </li>
         ))}
       </ul>

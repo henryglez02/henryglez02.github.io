@@ -29,11 +29,16 @@ export default function Page() {
           <div className="flex flex-col justify-center items-center gap-2 ">
             <h1 className="text-2xl sm:text-4xl font-bold">Henry Glez</h1>
             <p className="  sm:text-lg opacity-80 text-center">
-              I'm a passionate web development and design UI/UX.
+              A web developer with a passion for accessibility.{" "}
+              <span className="flex">
+                Accessible web design and development, creating digital
+                experiences for all.
+              </span>
             </p>
           </div>
           <div className="flex items-center gap-4 justify-center ">
             <Link
+              aria-label="Github"
               className="text-slate-300 hover:text-teal-300"
               href="https://github.com/henryglez02"
             >
@@ -50,6 +55,7 @@ export default function Page() {
               </svg>
             </Link>
             <Link
+              aria-label="LinkedIn"
               className="text-slate-300 hover:text-teal-300"
               href="https://linkedin.com/in/henryglez02"
             >
@@ -66,6 +72,7 @@ export default function Page() {
               </svg>
             </Link>
             <Link
+              aria-label="Gmail"
               className="text-slate-300 hover:text-teal-300"
               href="mailto:henryglez02@gmail.com"
             >
@@ -171,7 +178,12 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] items-center gap-4 sm:gap-6  ">
             {skills.map((item, index) => (
-              <SkillItem key={index} name={item.name} image={item.image} />
+              <SkillItem
+                key={index}
+                name={item.name}
+                image={item.image}
+                alt={item.alt}
+              />
             ))}
           </div>
         </section>

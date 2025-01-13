@@ -22,7 +22,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
       className="relative flex flex-col w-full p-4 border border-slate-600 gap-4 rounded-xl hover:-translate-y-1 hover:scale-100  duration-200  shadow-sm  "
     >
       <div className="flex">
-        <h2 className=" font-semibold  text-lg  ">{title}</h2>
+        <h3 className=" font-semibold  text-lg  ">{title}</h3>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
