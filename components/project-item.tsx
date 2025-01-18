@@ -43,7 +43,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
         {techs.map((tech, index) => (
           <li
             key={index}
-            className="rounded-full bg-teal-400/10 px-3 py-1 text-sm sm:text-sm font-medium  text-teal-300"
+            className="rounded-full ring-1 ring-gray-800 px-3 py-1 text-sm sm:text-sm font-medium  text-teal-400"
           >
             {tech}
           </li>
