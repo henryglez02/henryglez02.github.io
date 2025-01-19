@@ -16,8 +16,8 @@ export default function Page() {
           <Image
             className=" rounded-full sm:w-48 sm:h-48 object-cover object-center border-8  border-gray-900"
             src={"/images/avatar.jpg"}
-            alt="Picture of the author"
-            quality={100}
+            alt="Henry Glez pictured in front of a mosaic wall on a sunny day"
+            quality={50}
             width={160}
             height={160}
             priority
@@ -32,7 +32,7 @@ export default function Page() {
               <span className="text-teal-400 font-semibold">Accessibility</span>
               .{" "}
               <span className="flex">
-                Accessible web design and development, creating digital
+                Accessible design and development, creating digital
                 experiences for all.
               </span>
             </p>
