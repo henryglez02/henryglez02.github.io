@@ -8,9 +8,6 @@ import { experience, projects, skills } from "@/data/data";
 export default function Page() {
   return (
     <div className="flex relative flex-col  min-h-screen max-w-3xl animate-fade-in-y items-center justify-center m-auto py-10">
-      {/* <header className="hidden w-full px-6 py-4  z-10 sticky top-0  backdrop-blur-lg text-white  justify-between items-center">
-        <p>Hello</p> <p>mode</p>
-      </header> */}
       <main className="flex flex-col gap-12 px-6 items-center justify-center ">
         <section
           id="introduction"
@@ -19,8 +16,8 @@ export default function Page() {
           <Image
             className=" rounded-full sm:w-48 sm:h-48 object-cover object-center border-8  border-gray-900"
             src={"/images/avatar.jpg"}
-            alt="Picture of the author"
-            quality={100}
+            alt="Henry Glez pictured in front of a mosaic wall on a sunny day"
+            quality={50}
             width={160}
             height={160}
             priority
@@ -29,23 +26,27 @@ export default function Page() {
           <div className="flex flex-col justify-center items-center gap-2 ">
             <h1 className="text-2xl sm:text-4xl font-bold">Henry Glez</h1>
             <p className="  sm:text-lg opacity-80 text-center">
-              A web developer with a passion for accessibility.{" "}
+              A{" "}
+              <span className="text-teal-400 font-semibold">Web Developer</span>{" "}
+              with a passion for{" "}
+              <span className="text-teal-400 font-semibold">Accessibility</span>
+              .{" "}
               <span className="flex">
-                Accessible web design and development, creating digital
+                Accessible design and development, creating digital
                 experiences for all.
               </span>
             </p>
           </div>
-          <div className="flex items-center gap-4 justify-center ">
+          <div className="flex items-center gap-5 justify-center ">
             <Link
               aria-label="Github"
-              className="text-slate-300 hover:text-teal-300"
+              className="text-slate-300 hover:outline-2 hover:outline hover:outline-teal-600 rounded"
               href="https://github.com/henryglez02"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="2.3em"
-                height="2.3em"
+                width="2.5em"
+                height="2.5em"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -56,13 +57,13 @@ export default function Page() {
             </Link>
             <Link
               aria-label="LinkedIn"
-              className="text-slate-300 hover:text-teal-300"
+              className="text-slate-300 hover:outline-2 hover:outline hover:outline-teal-600 rounded "
               href="https://linkedin.com/in/henryglez02"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="2.3em"
-                height="2.3em"
+                width="2.5em"
+                height="2.5em"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -73,13 +74,13 @@ export default function Page() {
             </Link>
             <Link
               aria-label="Gmail"
-              className="text-slate-300 hover:text-teal-300"
+              className="text-slate-300  hover:outline-2 hover:outline hover:outline-teal-600 rounded "
               href="mailto:henryglez02@gmail.com"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="2.3em"
-                height="2.3em"
+                width="2.5em"
+                height="2.5em"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -90,7 +91,7 @@ export default function Page() {
             </Link>
           </div>
           <Link
-            className=" font-medium py-2 px-4 rounded-2xl flex gap-2 items-center justify-center bg-teal-600 text-white hover:bg-teal-500 transition-all duration-300"
+            className=" font-medium py-2 px-4 mt-1 rounded-2xl flex gap-2 items-center justify-center bg-teal-700 text-white hover:outline-2 hover:outline hover:outline-teal-600 hover:outline-offset-4 focus:outline-offset-4 "
             href="https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct"
           >
             Download CV

@@ -19,7 +19,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
         setIsHover(false);
       }}
       href={link}
-      className="relative flex flex-col w-full p-4 border border-slate-600 gap-4 rounded-xl hover:-translate-y-1 hover:scale-100  duration-200  shadow-sm  "
+      className="relative flex flex-col w-full p-4 border border-slate-600 hover:border-slate-400  gap-4 rounded-xl hover:-translate-y-1 hover:scale-100  duration-200  shadow-sm  "
     >
       <div className="flex">
         <h3 className=" font-semibold  text-lg  ">{title}</h3>
@@ -43,7 +43,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
         {techs.map((tech, index) => (
           <li
             key={index}
-            className="rounded-full bg-teal-400/10 px-3 py-1 text-sm sm:text-sm font-medium  text-teal-300"
+            className="rounded-full ring-1 ring-gray-800 px-3 py-1 text-sm sm:text-sm font-medium  text-teal-400"
           >
             {tech}
           </li>

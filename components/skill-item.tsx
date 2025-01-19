@@ -15,7 +15,7 @@ export const SkillItem: React.FC<SkillItemProps> = ({
           width={56}
           height={56}
           className="sm:w-20  sm:h-20  "
-          quality={100}
+          quality={50}
         />
       </div>
       <p className="opacity-75">{name}</p>
