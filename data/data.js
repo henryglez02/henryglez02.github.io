@@ -1,42 +1,67 @@
-import { title } from "process";
-
 const experience = [
   {
-    position: "Accessibility Tester",
     company: "A11ySolutions",
-    tasks: [
-      "Conducted accessibility audits on various websites, identifying and reporting issues according to WCAG guidelines.",
-      "Implemented solutions to improve accessibility, including correcting HTML structure and using ARIA patterns.",
-      "Collaborated with the development team to ensure compliance with accessibility standards and best practices.",
+    roles: [
+      {
+        position: "Full Stack Developer - AI Engineer",
+        date: "Oct 2022 — Present",
+        tasks: [
+          "Built web tools to automate accessibility QA using WCAG-based validation logic.",
+          "Designed AI-assisted workflows to generate and validate accessibility issues.",
+          "Implemented heuristic and rule-based logic to support AI-driven accessibility checks.",
+          
+        ],
+      },
+      {
+        position: "A11y Expert",
+        date: "Oct 2022 — Present",
+        tasks: [
+          "Performed WCAG-based accessibility audits and reported issues.",
+          "Proposed and validated accessibility fixes (HTML, ARIA).",
+          "Worked closely with developers to ensure compliance and best practices.",
+        ],
+      },
     ],
   },
   {
-    position: "Frontend Developer",
     company: "Inmersoft",
-    tasks: [
-      "Developed a Latin American music streaming platform using React.",
-      "Implemented reusable components for music playback, navigation, and playlist management.",
-      "Optimized performance for smooth playback and collaborated with the backend team for RESTful API integration.",
-      "Collaborated with designers and product managers to define project requirements and design user interfaces.",
+    roles: [
+      {
+        position: "Frontend Developer",
+        date: "Jan 2021 — Sep 2022",
+        tasks: [
+          "Built a React-based music streaming platform.",
+          "Developed reusable UI components and playback features.",
+          "Integrated REST APIs and optimized performance.",
+        ],
+      },
     ],
   },
   {
-    position: "Frontend Developer",
     company: "Liontude",
-    tasks: [
-      "Developed and maintained a software application using Flutter.",
-      "Collaborated with product managers, designers, and backend developers to define project scope.",
-      "Implemented REST APIs and integrated them with backend services.",
-      "Conducted code reviews and implemented best practices for code quality and performance.",
+    roles: [
+      {
+        position: "Mobile Developer",
+        date: "Jun 2020 — Dec 2020",
+        tasks: [
+          "Developed cross-platform applications using Flutter.",
+          "Integrated REST APIs and collaborated with cross-functional teams.",
+          "Applied best practices for code quality and performance.",
+        ],
+      },
     ],
   },
   {
-    position: "QA Tester",
     company: "Recharge Phones",
-    tasks: [
-      "Developed rigorous tests for the website to guarantee its correct operation and a smooth user experience.",
-      "Executed test cases that covered different phone recharge scenarios and payment situations.",
-      "Identified and documented errors, performance issues, and functional deficiencies using issue tracking and management tools.",
+    roles: [
+      {
+        position: "QA Tester",
+        date: "Jan 2020 — May 2020",
+        tasks: [
+          "Designed and executed functional and payment-related test cases.",
+          "Reported bugs and usability issues using tracking tools.",
+        ],
+      },
     ],
   },
 ];
@@ -99,11 +124,7 @@ const skills = [
     image: "/images/LogosPostgresql.svg",
   },
   { name: "Flutter", alt: "Flutter logo", image: "/images/LogosFlutter.svg" },
-  {
-    name: "Playwright",
-    alt: "Playwright logo",
-    image: "/images/playwright_logo.svg",
-  },
+  { name: "Playwright", alt: "Playwright logo", image: "/images/playwright_logo.svg" },
 ];
 
 export { experience, projects, skills };

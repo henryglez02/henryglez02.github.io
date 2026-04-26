@@ -3,154 +3,155 @@ import Link from "next/link";
 import { ExperienceItem } from "@/components/experience-item";
 import { ProjectItem } from "@/components/project-item";
 import { SkillItem } from "@/components/skill-item";
+import { Footer } from "@/components/footer";
 import { experience, projects, skills } from "@/data/data";
 
 export default function Page() {
   return (
-    <div className="flex relative flex-col  min-h-screen max-w-3xl animate-fade-in-y items-center justify-center m-auto py-10">
-      <main className="flex flex-col gap-12 px-6 items-center justify-center ">
-        <section
-          id="introduction"
-          className="flex flex-col gap-5 pt-7 pb-5 items-center justify-center "
-        >
-          <Image
-            className=" rounded-full sm:w-48 sm:h-48 object-cover object-center border-8  border-gray-900"
-            src={"/images/avatar.jpg"}
-            alt="Henry Glez pictured in front of a mosaic wall on a sunny day"
-            quality={50}
-            width={160}
-            height={160}
-            priority
-          />
-
-          <div className="flex flex-col justify-center items-center gap-2 ">
-            <h1 className="text-2xl sm:text-4xl font-bold">Henry Glez</h1>
-            <p className="  sm:text-lg opacity-80 text-center">
-              A{" "}
-              <span className="text-teal-400 font-semibold">Web Developer</span>{" "}
-              with a passion for{" "}
-              <span className="text-teal-400 font-semibold">Accessibility</span>
-              .{" "}
-              <span className="flex">
-                Accessible design and development, creating digital
-                experiences for all.
-              </span>
-            </p>
+    <div className="relative z-10 flex flex-col min-h-screen">
+      <main className="max-w-4xl mx-auto px-6 py-15 md:py-16 w-full flex flex-col gap-1">
+        {/* Hero Section */}
+        <section className="flex flex-col items-center text-center pt-8 md:pt-0 mb-20 animate-fade-in-y gap-3">
+          <div
+            className="relative w-36 h-36 md:w-48 md:h-48 mb-8 group"
+            data-mouse-reveal
+          >
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-emerald-700 animate-pulse-glow opacity-70" />
+            <Image
+              className="w-full h-full p-1 object-cover rounded-full border-4 border-primary shadow-[0_0_40px_rgba(13,148,136,0.35)] relative z-10"
+              src="/images/avatar.jpg"
+              alt="Henry Glez pictured in front of a mosaic wall on a sunny day"
+              quality={80}
+              width={192}
+              height={192}
+              priority
+            />
           </div>
-          <div className="flex items-center gap-5 justify-center ">
+
+          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight text-white animate-fade-in-y stagger-1">
+            Henry Glez
+          </h1>
+
+          <p className="text-lg mb-6 max-w-lg leading-relaxed text-slate-600 dark:text-slate-400">
+            A <span className="text-primary font-semibold">Web Developer</span>{" "}
+            with a passion for{" "}
+            <span className="text-primary font-semibold">Accessibility</span>{" "}
+            and <span className="text-primary font-semibold">AI</span>.
+            <br />
+            Accessible design and development, creating digital experiences for
+            all.
+          </p>
+
+          <div className="flex gap-6 mb-8 animate-fade-in-y stagger-3">
             <Link
               aria-label="Github"
-              className="text-slate-300 hover:outline-2 hover:outline hover:outline-teal-600 rounded"
+              className="mouse-reveal-link"
               href="https://github.com/henryglez02"
+              data-mouse-reveal
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="2.5em"
-                height="2.5em"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4.44c-.32-.07-.33-.68-.33-.89l.01-2.47c0-.84-.29-1.39-.61-1.67c2.01-.22 4.11-.97 4.11-4.44c0-.98-.35-1.79-.92-2.42c.09-.22.4-1.14-.09-2.38c0 0-.76-.23-2.48.93c-.72-.2-1.48-.3-2.25-.31c-.76.01-1.54.11-2.25.31c-1.72-1.16-2.48-.93-2.48-.93c-.49 1.24-.18 2.16-.09 2.38c-.57.63-.92 1.44-.92 2.42c0 3.47 2.1 4.22 4.1 4.47c-.26.2-.49.6-.57 1.18c-.52.23-1.82.63-2.62-.75c0 0-.48-.86-1.38-.93c0 0-.88 0-.06.55c0 0 .59.28 1 1.32c0 0 .52 1.75 3.03 1.21l.01 1.53c0 .21-.02.82-.34.89H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
-                  fill="currentColor"
-                />
+              <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
               </svg>
             </Link>
             <Link
               aria-label="LinkedIn"
-              className="text-slate-300 hover:outline-2 hover:outline hover:outline-teal-600 rounded "
+              className="mouse-reveal-link"
               href="https://linkedin.com/in/henryglez02"
+              data-mouse-reveal
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="2.5em"
-                height="2.5em"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
-                />
+              <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </Link>
             <Link
-              aria-label="Gmail"
-              className="text-slate-300  hover:outline-2 hover:outline hover:outline-teal-600 rounded "
+              aria-label="Email"
+              className="mouse-reveal-link"
               href="mailto:henryglez02@gmail.com"
+              data-mouse-reveal
             >
               <svg
+                className="w-7 h-7 scale-125"
                 xmlns="http://www.w3.org/2000/svg"
-                width="2.5em"
-                height="2.5em"
                 viewBox="0 0 24 24"
               >
                 <path
                   fill="currentColor"
-                  d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"
+                  d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.175q.125 0 .263-.038t.262-.112L19.6 8.25q.2-.125.3-.312t.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.012T4 7.525q0 .25.1.438t.3.287l7.075 4.425q.125.075.263.113t.262.037"
                 />
               </svg>
             </Link>
           </div>
+
           <Link
-            className=" font-medium py-2 px-4 mt-1 rounded-2xl flex gap-2 items-center justify-center bg-teal-700 text-white hover:outline-2 hover:outline hover:outline-teal-600 hover:outline-offset-4 focus:outline-offset-4 "
+            className="mouse-reveal-btn inline-flex items-center px-6 py-3 text-white font-medium rounded-full shadow-lg shadow-primary/20 transition-all duration-200 hover:-translate-y-0.5 animate-fade-in-y stagger-4"
             href="https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct"
+            data-mouse-reveal
           >
             Download CV
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1.5em"
-              height="1.5em"
+              className="ml-2 w-4 h-4"
+              fill="none"
               viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
             >
               <path
-                fill="currentColor"
-                d="M5 20h14v-2H5zM19 9h-4V3H9v6H5l7 7z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
               />
             </svg>
           </Link>
         </section>
-        <section id="experience" className="flex flex-col gap-5 w-full ">
-          <div className="flex items-center  gap-2 ">
-            <h2 className="text-2xl sm:text-4xl font-bold ">Experience</h2>
+
+        {/* Experience Section */}
+        <section className="mb-20 animate-fade-in-y stagger-4">
+          <h2 className="section-heading mb-8">
+            Experience
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1.5em"
-              height="1.5em"
+              className="w-6 h-6 text-primary"
+              fill="none"
               viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
             >
               <path
-                fill="currentColor"
-                d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2m-6 0h-4V4h4z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"
               />
             </svg>
-          </div>
-          <div className="flex flex-col gap-4 ">
+          </h2>
+          <div className="space-y-10">
             {experience.map((item, index) => (
               <ExperienceItem
                 key={index}
                 company={item.company}
-                position={item.position}
-                tasks={item.tasks}
+                roles={item.roles}
               />
             ))}
           </div>
         </section>
-        <section id="projects" className="flex flex-col gap-5 w-full ">
-          <div className="flex items-center  gap-2 ">
-            <h2 className="text-2xl sm:text-4xl font-bold ">Projects</h2>
 
+        {/* Projects Section */}
+        <section className="mb-20 animate-fade-in-y stagger-5">
+          <h2 className="section-heading mb-8">
+            Projects
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1.5em"
-              height="1.5em"
+              className="w-6 h-6 text-primary"
+              fill="none"
               viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
             >
               <path
-                fill="currentColor"
-                d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-5 3c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
               />
             </svg>
-          </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] items-center gap-4 w-full  ">
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((item, index) => (
               <ProjectItem
                 key={index}
@@ -162,22 +163,26 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section id="skills" className="flex flex-col gap-5 w-full py-4 ">
-          <div className="flex items-center  gap-2 ">
-            <h2 className="text-2xl sm:text-4xl font-bold ">Skills</h2>
+
+        {/* Skills Section */}
+        <section className="animate-fade-in-y stagger-6">
+          <h2 className="section-heading mb-10">
+            Skills
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1.5em"
-              height="1.5em"
+              className="w-6 h-6 text-primary"
+              fill="none"
               viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
             >
               <path
-                fill="currentColor"
-                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
               />
             </svg>
-          </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] items-center gap-4 sm:gap-6  ">
+          </h2>
+          <div className="skills-grid">
             {skills.map((item, index) => (
               <SkillItem
                 key={index}
@@ -189,6 +194,8 @@ export default function Page() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }
