@@ -2,24 +2,216 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: rgb(15 23 42);
-  }
+:root {
+  --color-primary: #0D9488;
+  --color-primary-light: #2DD4BF;
+  --color-surface: #0F172A;
+  --color-surface-light: #1E293B;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --mouse-gradient-size: clamp(36px, 5vw, 72px);
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: rgb(238, 236, 235);
-  background: radial-gradient( 800px circle at 0px 0px, rgba(29, 78, 216, 0.15), transparent 80% );
-
+  color: rgb(226, 232, 240);
+  background-color: var(--color-surface);
 }
 
-.animated-text {
-       font-size: 30px;
-       animation: fade-in-y 1s linear;
-   }
-   @keyframes fade-in-y {
-       0% { opacity: 0; transform: translateY(25px); }
-       100% { opacity: 1;  transform: translateY(0px);}
-   }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    var(--mouse-gradient-size) circle at var(--mouse-x) var(--mouse-y),
+    rgba(45, 212, 191, 0.045),
+    rgba(15, 118, 110, 0)
+  );
+  transition: background 0.2s ease-out;
+  z-index: 0;
+}
+
+/* Mouse reveal color effect */
+[data-mouse-reveal] {
+  --mouse-reveal-proximity: 0;
+}
+
+.mouse-reveal-media {
+  --mouse-reveal-hover: 0;
+  filter: grayscale(calc(1 - max(var(--mouse-reveal-proximity, 0), var(--mouse-reveal-hover))));
+  transition: filter 0.18s linear, transform 0.25s ease;
+  will-change: filter;
+}
+
+/* Interactive link reveal effect */
+.mouse-reveal-link {
+  --mouse-reveal-hover: 0;
+  --reveal: max(var(--mouse-reveal-proximity, 0), var(--mouse-reveal-hover));
+  color: color-mix(in srgb, var(--color-primary) calc(var(--reveal) * 100%), rgb(148 163 184));
+  transition: color 0.18s linear, transform 0.2s ease;
+}
+.mouse-reveal-link:hover {
+  --mouse-reveal-hover: 1;
+}
+
+/* Interactive card reveal effect with directional glow */
+.mouse-reveal-card {
+  --mouse-reveal-hover: 0;
+  --reveal: max(var(--mouse-reveal-proximity, 0), var(--mouse-reveal-hover));
+  --mouse-x-rel: 50%;
+  --mouse-y-rel: 50%;
+  --card-surface-start: rgb(22, 32, 52);
+  --card-surface-end: rgb(17, 27, 46);
+  position: relative;
+  background: linear-gradient(135deg, var(--card-surface-start), var(--card-surface-end));
+  border-color: rgba(51, 65, 85, 0.5);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.2s ease;
+}
+.mouse-reveal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    160px circle at var(--mouse-x-rel) var(--mouse-y-rel),
+    rgba(45, 212, 191, calc(var(--reveal) * 0.85)),
+    transparent 58%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+.mouse-reveal-card > * {
+  position: relative;
+  z-index: 1;
+}
+.mouse-reveal-card:hover {
+  --mouse-reveal-hover: 1;
+}
+
+/* Animated multicolor button border */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.mouse-reveal-btn {
+  --mouse-reveal-hover: 0;
+  --reveal: max(var(--mouse-reveal-proximity, 0), var(--mouse-reveal-hover));
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.mouse-reveal-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #0d9488,
+    #2dd4bf,
+    #06b6d4,
+    #8b5cf6,
+    #ec4899,
+    #f97316,
+    #0d9488
+  );
+  opacity: calc(var(--reveal) * 0.9);
+  z-index: -2;
+  animation: rotate-gradient 3s linear infinite;
+}
+
+.mouse-reveal-btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: var(--color-primary);
+  z-index: -1;
+  transition: background 0.2s ease;
+}
+
+.mouse-reveal-btn:hover::after {
+  background: #0f766e;
+}
+
+.mouse-reveal-btn:hover {
+  --mouse-reveal-hover: 1;
+}
+
+@keyframes rotate-gradient {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
+
+/* Staggered entrance animations */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+.skills-grid {
+  @apply grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:grid-rows-2;
+}
+
+.skill-card {
+  @apply flex flex-col items-center justify-start gap-3 text-center;
+}
+
+/* Skill icon grayscale effect from reference */
+.skill-icon {
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.skill-icon:hover {
+  --mouse-reveal-hover: 1;
+  transform: scale(1.1);
+}
+
+/* Section divider style */
+.section-heading {
+  @apply text-2xl sm:text-3xl font-bold flex items-center gap-3 pb-3 border-b border-slate-700/60 text-slate-100;
+}
+
+/* Smooth link underline */
+.link-underline {
+  @apply relative;
+}
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300;
+}
+.link-underline:hover::after {
+  @apply w-full;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

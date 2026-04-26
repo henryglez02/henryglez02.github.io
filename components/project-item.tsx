@@ -1,6 +1,5 @@
-"use client";
 import Link from "next/link";
-import { useState } from "react";
+import { ProjectItemProps } from "@/types/types";
 
 export const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
@@ -8,28 +7,21 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
   techs,
   link,
 }) => {
-  const [isHover, setIsHover] = useState(false);
-
   return (
     <Link
-      onMouseEnter={() => {
-        setIsHover(true);
-      }}
-      onMouseLeave={() => {
-        setIsHover(false);
-      }}
       href={link}
-      className="relative flex flex-col w-full p-4 border border-slate-600 hover:border-slate-400  gap-4 rounded-xl hover:-translate-y-1 hover:scale-100  duration-200  shadow-sm  "
+      className="group relative flex flex-col w-full p-6 rounded-xl bg-surface-light/40 border mouse-reveal-card gap-4"
+      data-mouse-reveal
     >
-      <div className="flex">
-        <h3 className=" font-semibold  text-lg  ">{title}</h3>
+      <div className="flex items-start justify-between">
+        <h3 className="text-lg font-bold text-slate-100 group-hover:text-primary transition-colors duration-200">
+          {title}
+        </h3>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className={`absolute top-2 right-2 w-5 h-5 text-slate-400 ${
-            !isHover && "hidden"
-          } `}
+          className="w-4 h-4 text-slate-500 opacity-0 group-hover:opacity-100 transition-all duration-200 -translate-y-1 translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 flex-shrink-0 mt-1"
         >
           <path
             fillRule="evenodd"
@@ -38,17 +30,17 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
           />
         </svg>
       </div>
-      <p className="opacity-80  max-w-sm ">{description}</p>
-      <ul className="flex flex-wrap items-center justify-start  gap-1 text-sm sm:text-base ">
-        {techs.map((tech, index) => (
-          <li
+      <p className="text-slate-400 text-sm leading-relaxed">{description}</p>
+      <div className="flex flex-wrap gap-2 mt-auto">
+        {techs.map((tech: string, index: number) => (
+          <span
             key={index}
-            className="rounded-full ring-1 ring-gray-800 px-3 py-1 text-sm sm:text-sm font-medium  text-teal-400"
+            className="px-3 py-1 text-xs font-semibold rounded-full bg-slate-800/80 text-slate-300 border border-slate-700/50"
           >
             {tech}
-          </li>
+          </span>
         ))}
-      </ul>
+      </div>
     </Link>
   );
 };

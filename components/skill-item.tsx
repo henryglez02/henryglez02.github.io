@@ -1,24 +1,20 @@
 import Image from "next/image";
+import { SkillItemProps } from "@/types/types";
 
-export const SkillItem: React.FC<SkillItemProps> = ({
-  name,
-  image,
-  alt,
-
-}) => {
+export const SkillItem: React.FC<SkillItemProps> = ({ name, image, alt }) => {
   return (
-    <div className="flex flex-col gap-1 items-center  ">
-      <div className="flex flex-col gap-2 items-center   hover:scale-110 transition-all duration-300  ">
+    <div className="skill-card">
+      <div className="skill-icon" data-mouse-reveal>
         <Image
           src={image}
           alt={alt}
-          width={56}
-          height={56}
-          className="sm:w-20  sm:h-20  "
+          width={52}
+          height={52}
+          className="object-contain"
           quality={50}
         />
       </div>
-      <p className="opacity-75">{name}</p>
+      <span className="text-xs font-medium text-slate-500">{name}</span>
     </div>
   );
 };
