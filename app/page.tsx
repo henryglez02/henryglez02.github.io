@@ -1,17 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollHeader } from "@/components/scroll-header";
 import { ExperienceItem } from "@/components/experience-item";
 import { ProjectItem } from "@/components/project-item";
 import { SkillItem } from "@/components/skill-item";
 import { Footer } from "@/components/footer";
 import { experience, projects, skills } from "@/data/data";
 
+const cvHref =
+  "https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct";
+
 export default function Page() {
   return (
     <div className="relative z-10 flex flex-col min-h-screen">
+      <ScrollHeader heroId="hero-section" cvHref={cvHref} />
       <main className="max-w-4xl mx-auto px-6 py-15 md:py-16 w-full flex flex-col gap-1">
         {/* Hero Section */}
-        <section className="flex flex-col items-center text-center pt-8 md:pt-0 mb-20 animate-fade-in-y gap-3">
+        <section
+          id="hero-section"
+          className="flex flex-col items-center text-center pt-8 md:pt-0 mb-20 animate-fade-in-y gap-3"
+        >
           <div
             className="relative w-36 h-36 md:w-48 md:h-48 mb-8 group"
             data-mouse-reveal
@@ -84,7 +92,7 @@ export default function Page() {
 
           <Link
             className="mouse-reveal-btn inline-flex items-center px-6 py-3 text-white font-medium rounded-full shadow-lg shadow-primary/20 transition-all duration-200 hover:-translate-y-0.5 animate-fade-in-y stagger-4"
-            href="https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct"
+            href={cvHref}
             data-mouse-reveal
           >
             Download CV

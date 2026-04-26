@@ -14,7 +14,7 @@ export const SkillItem: React.FC<SkillItemProps> = ({ name, image, alt }) => {
           quality={50}
         />
       </div>
-      <span className="text-xs font-medium text-slate-500">{name}</span>
+      <span className="text-xs font-medium text-slate-400">{name}</span>
     </div>
   );
 };
