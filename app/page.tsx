@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer";
 import { experience, projects, skills } from "@/data/data";
 
 const cvHref =
-  "https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct";
+  "https://drive.google.com/uc?export=download&id=13PuOmydLFb4bUALGLRkkjQQXIHhwTJyl";
 
 export default function Page() {
   return (
@@ -40,11 +40,11 @@ export default function Page() {
             Henry Glez
           </h1>
 
-          <p className="text-lg mb-6 max-w-lg leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="mb-6 max-w-lg leading-relaxed text-slate-600 dark:text-slate-400">
             A <span className="text-primary font-semibold">Web Developer</span>{" "}
             with a passion for{" "}
-            <span className="text-primary font-semibold">Accessibility</span>{" "}
-            and <span className="text-primary font-semibold">AI</span>.
+            <span className="text-primary font-semibold">AI</span>{" "}
+            and <span className="text-primary font-semibold">Accessibility</span>.
             <br />
             Accessible design and development, creating digital experiences for
             all.

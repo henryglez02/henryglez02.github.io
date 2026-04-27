@@ -9,7 +9,6 @@ const experience = [
           "Built web tools to automate accessibility QA using WCAG-based validation logic.",
           "Designed AI-assisted workflows to generate and validate accessibility issues.",
           "Implemented heuristic and rule-based logic to support AI-driven accessibility checks.",
-          
         ],
       },
       {
@@ -111,20 +110,24 @@ const skills = [
     image: "/images/LogosNextjsIcon.svg",
   },
   { name: "Node.js", alt: "Node logo", image: "/images/LogosNodejsIcon.svg" },
-  {
-    name: "Strapi",
-    alt: "Strapi logo",
-    image: "/images/strapi_logo.webp",
-  },
   { name: "Python", alt: "Python logo", image: "/images/LogosPython.svg" },
   { name: "Django", alt: "Django logo", image: "/images/LogosDjangoIcon.svg" },
+  {
+    name: "Langflow",
+    alt: "Langflow logo",
+    image: "/images/LogosLangflow.svg",
+  },
   {
     name: "PostgreSQL",
     alt: "PostgreSQL logo",
     image: "/images/LogosPostgresql.svg",
   },
+  {
+    name: "Strapi",
+    alt: "Strapi logo",
+    image: "/images/strapi_logo.webp",
+  },
   { name: "Flutter", alt: "Flutter logo", image: "/images/LogosFlutter.svg" },
-  { name: "Playwright", alt: "Playwright logo", image: "/images/playwright_logo.svg" },
 ];
 
 export { experience, projects, skills };
