@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer";
 import { experience, projects, skills } from "@/data/data";
 
 const cvHref =
-  "https://drive.google.com/uc?export=download&id=1DBF2cSxI0JsrKA84dvVDAh3sNDJAdOct";
+  "https://drive.google.com/uc?export=download&id=13PuOmydLFb4bUALGLRkkjQQXIHhwTJyl";
 
 export default function Page() {
   return (
