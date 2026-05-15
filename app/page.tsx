@@ -27,7 +27,7 @@ export default function Page() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-emerald-700 animate-pulse-glow opacity-70" />
             <Image
               className="w-full h-full p-1 object-cover rounded-full border-4 border-primary shadow-[0_0_40px_rgba(13,148,136,0.35)] relative z-10"
-              src="/images/avatar.jpg"
+              src="/images/avatar.png"
               alt="Henry Glez pictured in front of a mosaic wall on a sunny day"
               quality={80}
               width={192}
@@ -41,7 +41,7 @@ export default function Page() {
           </h1>
 
           <p className="mb-6 max-w-lg leading-relaxed text-slate-600 dark:text-slate-400">
-            A <span className="text-primary font-semibold">Web Developer</span>{" "}
+            A <span className="text-primary font-semibold">Software Developer</span>{" "}
             with a passion for{" "}
             <span className="text-primary font-semibold">AI</span>{" "}
             and <span className="text-primary font-semibold">Accessibility</span>.

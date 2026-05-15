@@ -44,11 +44,11 @@ export const ScrollHeader = ({ heroId, cvHref }: ScrollHeaderProps) => {
           : "pointer-events-none -translate-y-4 opacity-0"
       }`}
     >
-      <div className="scroll-header__inner">
+      <div className="scroll-header__inner mouse-reveal-card" data-mouse-reveal>
         <div className="flex items-center gap-3 min-w-0">
           <Image
             className="h-11 w-11 rounded-full border border-primary/60 object-cover shadow-[0_0_20px_rgba(13,148,136,0.22)]"
-            src="/images/avatar.jpg"
+            src="/images/avatar.png"
             alt="Henry Glez pictured in front of a mosaic wall on a sunny day"
             width={44}
             height={44}
